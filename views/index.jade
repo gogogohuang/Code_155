@@ -1,0 +1,64 @@
+extends layout
+
+block content
+  div.swiper-container(id='wrap')
+    div(class='bg swiper-wrapper item1')
+      div(id='section1', class='country_section swiper-slide swiper-slide-action')
+        div.info
+          p
+            strong CHINA
+          ul
+            li(id='tibet')
+              a(href='/tibet') Tibet
+            li(id='dali')
+              a(href='/yunnan') Yunnan
+            li(id='heimahe')
+              a(href='/northwest') Northwest
+            li(id='chengdu')
+              a(href='#') Sichuan
+            
+      div(id='section2', class=' country_section swiper-slide')
+        div.info
+          p
+            strong MYANMAR
+          ul 
+            li(id='yangon')
+              a(href='/myanmar') Yangon
+            li(id='inle')
+              a(href='/myanmar#inle') Inle Lake
+            li(id='mandalay')
+              a(href='/myanmar#mandalay') Mandalay
+            li(id='bagan')
+              a(href='/myanmar#bagan') Bagan
+            li(id='mawlamyine')
+              a(href='/myanmar#mawlamyine') Mawlamyine
+          
+      div(id='section3', class='country_section swiper-slide')
+        div.info
+          p
+            strong SRI LANKA
+          ul
+            li(id='lanka_mountain')
+              a(href='/lanka_mountain') Mountain
+            li(id='lanka_ocean')
+              a(href='#') Ocean
+            li(id='strangers')
+              a(href='#') Strangers
+          
+      div(id='section4', class='country_section swiper-slide')
+        div.info
+          p
+            strong THAILAND
+          ul
+            li(id='bangkok')
+              a(href='#') Bangkok
+            li(id='chiangmai')
+              a(href='#') Chiang Mai
+            li(id='pai')
+              a(href='#') PAI
+    
+    div(class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets")
+      span(class="swiper-pagination-bullet swiper-pagination-bullet-active")
+      span(class="swiper-pagination-bullet")
+      span(class="swiper-pagination-bullet")
+      span(class="swiper-pagination-bullet")

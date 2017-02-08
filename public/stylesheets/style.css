@@ -1,0 +1,235 @@
+/* Slider
+http://www.freshdesignweb.com/fashion-responsive-slider-tutorial.html
+*/
+
+
+/* Slider
+/*-----------------------------------------------------------------------------------*/
+
+.slider_container {
+    width: 100%;
+    margin: auto;
+    clear: both;
+    border: none;
+    background: black;
+}
+
+.flex-caption {
+    position: absolute;
+    right: 10%;
+    bottom: 5%;
+    background: darkgray;
+    opacity: 0.7;
+}
+
+.caption_title_line {
+    width: 450px;
+    height: 75px;
+    padding: 5px 15px 10px 15px;
+    color: #303030;
+}
+
+.flex-caption h2 {
+    color: #303030;
+    font-size: 20px;
+    padding: 5px 0 5px 0;
+    margin: 0px;
+    font-family: 'Ovo', serif;
+}
+
+.flex-container a:active,
+.flexslider a:active {
+    outline: none;
+}
+
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/* FlexSlider Necessary Styles
+*********************************/
+
+.flexslider {
+    width: auto;
+    margin: 0;
+    padding: 0 0 30px 0;
+}
+
+.flexslider .slides>li {
+    display: none;
+}
+
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+
+.flexslider .slides img {
+    max-height: 600px;
+    width: auto;
+    display: block;
+    background: center;
+    margin: auto;
+    background-size: cover;
+}
+
+.flex-pauseplay span {
+    text-transform: capitalize;
+}
+
+.slides:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+html[xmlns] .slides {
+    display: block;
+}
+
+* html .slides {
+    height: 1%;
+}
+
+.no-js .slides>li:first-child {
+    display: block;
+}
+
+.flexslider {
+    position: relative;
+    zoom: 1;
+}
+
+.flexslider .slides {
+    zoom: 1;
+}
+
+.flexslider .slides>li {
+    position: relative;
+}
+
+.flex-container {
+    zoom: 1;
+    position: relative;
+}
+
+
+/* Direction Nav */
+
+.flex-direction-nav li a {
+    margin: 0;
+    display: block;
+    position: absolute;
+    cursor: pointer;
+}
+
+.flex-direction-nav li a.next {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyICBsMTg5Ljk5OS0xOTBjMjAuMTc4LTIwLjE3OCw1My4xNjQtMTkuOTEzLDczLjY3MiwwLjU5NWwwLDBjMjAuNTA4LDIwLjUwOSwyMC43NzIsNTMuNDkyLDAuNTk1LDczLjY3MUwyOTMuNzUxLDQ1NS44Njh6Ii8+DQo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjIwLjI0OSw0NTUuODY4YzIwLjE4LDIwLjE3OSw1My4xNjQsMTkuOTEzLDczLjY3Mi0wLjU5NWwwLDBjMjAuNTA5LTIwLjUwOCwyMC43NzQtNTMuNDkzLDAuNTk2LTczLjY3MiAgbC0xOTAtMTkwYy0yMC4xNzgtMjAuMTc4LTUzLjE2NC0xOS45MTMtNzMuNjcxLDAuNTk1bDAsMGMtMjAuNTA4LDIwLjUwOS0yMC43NzIsNTMuNDkyLTAuNTk1LDczLjY3MUwyMjAuMjQ5LDQ1NS44Njh6Ii8+DQo8L3N2Zz4=);
+    background-size: contain;
+    transform: rotate(90deg);
+    left: 5%;
+    bottom: 40%;
+    opacity: 0.7;
+}
+
+.flex-direction-nav li a.prev {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyICBsMTg5Ljk5OS0xOTBjMjAuMTc4LTIwLjE3OCw1My4xNjQtMTkuOTEzLDczLjY3MiwwLjU5NWwwLDBjMjAuNTA4LDIwLjUwOSwyMC43NzIsNTMuNDkyLDAuNTk1LDczLjY3MUwyOTMuNzUxLDQ1NS44Njh6Ii8+DQo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjIwLjI0OSw0NTUuODY4YzIwLjE4LDIwLjE3OSw1My4xNjQsMTkuOTEzLDczLjY3Mi0wLjU5NWwwLDBjMjAuNTA5LTIwLjUwOCwyMC43NzQtNTMuNDkzLDAuNTk2LTczLjY3MiAgbC0xOTAtMTkwYy0yMC4xNzgtMjAuMTc4LTUzLjE2NC0xOS45MTMtNzMuNjcxLDAuNTk1bDAsMGMtMjAuNTA4LDIwLjUwOS0yMC43NzIsNTMuNDkyLTAuNTk1LDczLjY3MUwyMjAuMjQ5LDQ1NS44Njh6Ii8+DQo8L3N2Zz4=);
+    background-size: contain;
+    transform: rotate(-90deg);
+    right: 5%;
+    bottom: 40%;
+    opacity: 0.7;
+}
+
+.flex-direction-nav li a.next:hover {
+    opacity: 1;
+}
+
+.flex-direction-nav li a.prev:hover {
+    opacity: 1;
+}
+
+.flex-direction-nav li a.disabled {
+    opacity: .3;
+    filter: alpha(opacity=30);
+    cursor: default;
+}
+
+
+/* Control Nav */
+
+.flex-control-nav {
+    width: 100%;
+    position: absolute;
+    bottom: -30px;
+    text-align: center;
+}
+
+.flex-control-nav li {
+    margin: 0 0 0 5px;
+    display: inline-block;
+    zoom: 1;
+    display: inline;
+}
+
+.flex-control-nav li:first-child {
+    margin: 0;
+}
+
+.flex-control-nav li a {
+    width: 13px;
+    height: 13px;
+    display: block;
+    cursor: pointer;
+    text-indent: -9999px;
+}
+
+.flex-control-nav li a.active {
+    cursor: default;
+}
+
+
+/* Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 800px) {
+    .slider_container {
+        margin: 0 0 0 0;
+        clear: both;
+        padding: 30px 0 0 0;
+    }
+    .flexslider {
+        margin: 0;
+        padding: 0 0 30px 0;
+        background: none;
+    }
+    .flex-direction-nav li a {
+        margin: 0;
+        display: block;
+        position: absolute;
+        right: -10px;
+        cursor: pointer;
+        text-indent: -9999px;
+    }
+    .flexslider .slides img {
+        max-height: 250px;
+        max-width: 100%;
+    }
+    .flex-caption {
+        display: none;
+    }
+}

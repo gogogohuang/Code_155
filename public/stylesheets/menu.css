@@ -1,0 +1,413 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans";
+}
+
+.item1 {
+    background: url(https://c2.staticflickr.com/6/5772/30795554842_f90f1d0f91_c.jpg) no-repeat top center;
+    background-size: cover;
+}
+
+.item2 {
+    background: url(https://c2.staticflickr.com/6/5443/25343114109_25d8c85428_c.jpg) no-repeat top center;
+    background-size: cover;
+}
+
+.item3 {
+    background: url(https://c2.staticflickr.com/6/5468/30864437422_ea0ce2d5f2_c.jpg) no-repeat top center;
+    background-size: cover;
+}
+
+.item4 {
+    background: url(https://c2.staticflickr.com/6/5685/31004354186_7e43186817_c.jpg) no-repeat top center;
+    background-size: cover;
+}
+
+.country_section p {
+    font-size: 35px;
+    line-height: 30px;
+    color: #fff;
+    font-weight: 100;
+}
+
+.country_section p strong {
+    font-weight: bold;
+}
+
+#wrap {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    overflow: hidden;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    flex-direction: row;
+}
+
+.country_section {
+    height: 100%;
+    border-right: 1px solid #fff;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    -webkit-box-flex: 1;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1;
+    /* OLD - Firefox 19- */
+    width: 25%;
+    /* For old syntax, otherwise collapses. */
+    -webkit-flex: 1;
+    /* Chrome */
+    -ms-flex: 1;
+    /* IE 10 */
+    flex: 1 0;
+}
+
+.country_section:last-child {
+    border-right: none;
+}
+
+.country_section ul {
+    position: absolute;
+    margin: 2rem 0;
+    list-style: none;
+}
+
+.country_section ul li {
+    transition: all 0.4s ease-out;
+    text-align: center;
+    opacity: 0.5;
+    width: 15rem;
+}
+
+.country_section ul li:hover {
+    padding: 1rem 0;
+    border-radius: 0.5rem;
+    background-color: black;
+    font-size: 20px;
+    opacity: 1;
+}
+
+.country_section ul li a {
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.country_section .info {
+    margin: 2rem;
+    /*align-self: flex-end;*/
+    letter-spacing: 0.1rem;
+    opacity: 0.5;
+    position: fixed;
+    bottom: 0;
+}
+
+.country_section:hover .info a {
+    margin: 1rem 0;
+    color: #fff;
+}
+
+.country_section:hover {
+    cursor: pointer;
+}
+
+.country_section:hover .info {
+    margin: 20% 2rem;
+    opacity: 1;
+}
+
+.country_section a,
+.country_section .info,
+.item1,
+.item2,
+.item3,
+.item4 {
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+
+.hiddenimage {
+    display: none;
+}
+
+.swiper-pagination {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    /* Mobile */
+    html,
+    body {
+        height: 100%;
+        position: relative;
+    }
+    body {
+        background: #eee;
+        color: #000;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-container {
+        height: 100%;
+        width: 100%;
+    }
+    /* Mobile */
+    #section1 {
+        background: url(https://c2.staticflickr.com/6/5772/30795554842_f90f1d0f91_c.jpg) no-repeat top center;
+        background-size: cover;
+        transition: all 0.4s ease;
+    }
+    #section2 {
+        background: url(https://c2.staticflickr.com/6/5443/25343114109_25d8c85428_b.jpg) no-repeat top center;
+        background-size: cover;
+        transition: all 0.4s ease;
+    }
+    #section3 {
+        background: url(https://c2.staticflickr.com/6/5468/30864437422_ea0ce2d5f2_b.jpg) no-repeat top center;
+        background-size: cover;
+        transition: all 0.4s ease;
+    }
+    #section4 {
+        background: url(https://c2.staticflickr.com/6/5685/31004354186_7e43186817_b.jpg) no-repeat top center;
+        background-size: cover;
+        transition: all 0.4s ease;
+    }
+    .swiper-slide {
+        align-items: center;
+        background: #fff;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex: none;
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        width: 100%;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1 0;
+        font-size: 18px;
+        justify-content: center;
+        ms-flex-align: center;
+        ms-flex-pack: center;
+        text-align: center;
+        webkit-align-items: center;
+        webkit-box-align: center;
+        webkit-box-pack: center;
+        webkit-justify-content: center;
+    }
+    .country_section {
+        border: none;
+        flex: none;
+        -webkit-flex: none;
+    }
+    .country_section .info {}
+    .country_section p {
+        font-size: 24px;
+    }
+    .country_section ul {
+        position: relative;
+        list-style: none;
+        transition: all 0.5s ease;
+        line-height: 2rem;
+        width: 15rem;
+        display: table;
+        margin: 2rem auto;
+    }
+    .country_section ul li {
+        text-align: center;
+        position: relative;
+        width: 15rem;
+        opacity: 0.7;
+        font-size: 12px;
+        color: white;
+    }
+    .country_section ul li:hover {
+        /*padding: 1rem 0;*/
+        font-size: 15px;
+        opacity: 1;
+        text-decoration: none;
+    }
+    .country_section:hover .info {
+        margin: 0;
+    }
+    .country_section .info,
+    .country_section .info:hover {
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        opacity: 1;
+        /*align-self:center; */
+        position: absolute;
+        top: 5%;
+        left: 0;
+    }
+    .swiper-pagination {
+        display: block;
+        position: absolute;
+        bottom: 20px;
+        text-align: center;
+        width: 100%;
+    }
+    /*.swiper-pagination ul{ list-style:none; text-align:center}*/
+    .swiper-pagination .swiper-pagination-bullet {
+        display: inline-block;
+        margin: 0 2px;
+        width: 7px;
+        height: 7px;
+        -webkit-border-radius: 6px;
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.3);
+        border: 1px solid #fff;
+    }
+    .swiper-pagination .swiper-pagination-bullet-active {
+        background: rgba(255, 255, 255, 1);
+    }
+}
+
+
+/*For bg*/
+
+.img_tibet {
+    background: url(https://c2.staticflickr.com/6/5710/30891037295_5210b8362c_c.jpg) no-repeat top center !important;
+    background-size: cover !important;
+}
+
+.img_dali {
+    background: url(https://c2.staticflickr.com/6/5740/30220796684_3ec638fa67_c.jpg) no-repeat top center !important;
+    background-size: cover !important;
+}
+
+.img_dunhuang {
+    background: url(https://c2.staticflickr.com/6/5741/22781017228_8e4c3be772_c.jpg) no-repeat top center !important;
+    background-size: cover !important;
+}
+
+.img_zhangye {
+    background: url(https://c2.staticflickr.com/6/5621/30841654472_0df5732e7a_c.jpg) no-repeat top center !important;
+    background-size: cover !important;
+}
+
+.img_heimahe {
+    background: url(https://c2.staticflickr.com/6/5447/22749277298_765df8ef10_c.jpg) no-repeat top center !important;
+    background-size: cover !important;
+}
+
+.img_jiayuguan {
+    background: url(https://c2.staticflickr.com/6/5685/30872330161_a3c6a47940_c.jpg) no-repeat top center !important;
+    background-size: cover !important;
+}
+
+.img_lugu {
+    background: url(https://c2.staticflickr.com/6/5628/25338143939_3162795602_c.jpg) no-repeat top center !important;
+    background-size: cover !important;
+}
+
+.img_tianshui {
+    background: url(https://c2.staticflickr.com/6/5488/30217521323_c2c7d626f4_c.jpg) no-repeat top center !important;
+    background-size: cover !important;
+}
+
+.img_xian {
+    background: url(https://c2.staticflickr.com/6/5803/22778662458_9c0e84049d_c.jpg) no-repeat top center !important;
+    background-size: cover !important;
+}
+
+.img_menyuan {
+    background: url(https://c2.staticflickr.com/6/5481/30820403022_90cc70c947_c.jpg) no-repeat top center !important;
+    background-size: cover !important;
+}
+
+.img_caka {
+    background: url(https://c2.staticflickr.com/6/5447/30869868231_3c440d69ec_c.jpg) no-repeat top center !important;
+    background-size: cover !important;
+}
+
+.img_chengdu {
+    background: url(https://c2.staticflickr.com/6/5798/30819651632_9ab424243f_c.jpg) no-repeat top center !important;
+    background-size: cover !important;
+}
+
+.img_yangon {
+    background: url(https://c2.staticflickr.com/6/5515/30675228320_92db74ac7b_c.jpg) no-repeat top center !important;
+    background-size: cover !important;
+}
+
+.img_inle {
+    background: url(https://c2.staticflickr.com/6/5547/30889683281_263940868e_c.jpg) no-repeat top center !important;
+    background-size: cover !important;
+}
+
+.img_mandalay {
+    background: url(https://c2.staticflickr.com/6/5807/22800113708_285eda6a7d_c.jpg) no-repeat top center !important;
+    background-size: cover !important;
+}
+
+.img_bagan {
+    background: url(https://c2.staticflickr.com/6/5780/30889948201_888e1b4c14_c.jpg) no-repeat top center !important;
+    background-size: cover !important;
+}
+
+.img_mawlamyine {
+    background: url(https://c2.staticflickr.com/6/5507/22800319038_72c5c8cb70_c.jpg) no-repeat top center !important;
+    background-size: cover !important;
+}
+
+.img_lanka_mountain {
+    background: url(https://c2.staticflickr.com/6/5495/25359595929_48db607007_c.jpg) no-repeat top center !important;
+    background-size: cover !important;
+}
+
+.img_lanka_ocean {
+    background: url(https://c2.staticflickr.com/6/5834/30962620296_9e5d4024b3_c.jpg) no-repeat top center !important;
+    background-size: cover !important;
+}
+
+.img_strangers {
+    background: url(https://c2.staticflickr.com/6/5789/25362054139_88648bf629_c.jpg) no-repeat top center !important;
+    background-size: cover !important;
+}
+
+.img_bangkok {
+    background: url(https://c2.staticflickr.com/6/5531/30897670832_45c2275074_c.jpg) no-repeat top center !important;
+    background-size: cover !important;
+}
+
+.img_chiangmai {
+    background: url(https://c2.staticflickr.com/6/5711/30279344563_1393f1de8c_c.jpg) no-repeat top center !important;
+    background-size: cover !important;
+}
+
+.img_pai {
+    background: url(https://c2.staticflickr.com/6/5344/30926195451_fd06908428_c.jpg) no-repeat top center !important;
+    background-size: cover !important;
+}
+
+
+/*end*/

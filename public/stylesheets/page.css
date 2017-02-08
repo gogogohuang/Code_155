@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.city_bg {
+    background-color: dimgray;
+}
+
+.cover-img {
+    width: 100%;
+    background: no-repeat center;
+    background-size: cover;
+    display: block;
+}
+
+.city-img {
+    width: 100%;
+    background: no-repeat center;
+    background-size: contain;
+    display: block;
+}
+
+.intro-div {
+    height: 100%;
+    text-align: center;
+}
+
+.intro-div h1 {
+    position: absolute;
+    width: 100%;
+    margin-top: 30%;
+    z-index: 2;
+    color: #fff;
+    font: normal 400 64px/1 'Josefin Sans', sans-serif;
+    font-size: 5em;
+    text-align: center;
+}
+
+.intro-div p {
+    position: absolute;
+    width: 100%;
+    margin-top: 40%;
+    z-index: 2;
+    color: lightgray;
+    font: normal 200 'OSWALD', serif;
+    font-size: 2.5em;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.city-div {
+    position: absolute;
+    height: 20%;
+    background: black;
+}
+
+.text-div {
+    position: relative;
+    bottom: 0px;
+    padding: 10px 10% 5% 10%;
+    font: normal 1.5em/1 'OSWALD', serif;
+    text-align: left;
+    background: black;
+    line-height: 1.3em;
+}
+
+.text-div p {
+    color: lightgray;
+}
+
+@media(max-width:800px) {
+    .intro-div h1 {
+        font-size: 4em;
+    }
+    .text-div {
+        font-size: 1.3em;
+        line-height: 1.5em;
+    }
+}
+
+@media(max-width:600px) {
+    .intro-div h1 {
+        font-size: 3em;
+    }
+}
+
+.navbar-toggle .icon-bar {
+    position: relative;
+    transition: all 500ms ease-in-out;
+}
+
+@media(min-width:800px) {
+    .navbar {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+        transition: background .5s ease-in-out, padding .5s ease-in-out;
+    }
+    .top-nav-collapse {
+        padding: 0;
+    }
+}
+
+.navbar-toggle.side-cross .icon-bar:nth-of-type(1) {
+    top: 6px;
+    transform: rotate(45deg);
+}
+
+.navbar-toggle.side-cross .icon-bar:nth-of-type(2) {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+
+.navbar-toggle.side-cross .icon-bar:nth-of-type(3) {
+    top: -6px;
+    transform: rotate(-45deg);
+}
